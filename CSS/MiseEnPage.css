@@ -1,0 +1,51 @@
+:root {
+    --gap: 5px;
+    --trans-speed: 0.5s;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: auto;
+
+    &>* {
+        padding: var(--gap);
+        margin: var(--gap);
+    }
+
+    .header {
+        display: inline;
+    }
+
+    .footer {
+        display: inline;
+    }
+
+    .main {
+        flex: auto;
+        min-height: 5vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        padding: 5px;
+    }
+}
+
+.scroll {
+    overflow-y: auto;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
